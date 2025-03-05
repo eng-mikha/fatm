@@ -524,6 +524,28 @@ nav {
             border: 2px solid var(--black);
         }
     }
-
+    lord-icon {
+        cursor: pointer;
+    }
 } 
 /* end contact section */
+/* start some js things */
+.hidden {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+.hidden-top {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.visible-top {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* end some js things */
