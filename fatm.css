@@ -433,6 +433,8 @@ nav {
             .parent {
                 flex-direction: column;
                 height: 600px;
+                margin-left: auto;
+                margin-right: auto;
                 .child-one {
                     width: 100%;
                     margin-left: 20px;
