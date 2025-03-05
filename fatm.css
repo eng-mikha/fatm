@@ -309,6 +309,12 @@ nav {
             background-color:var(--main-c);
             color: var(--black);
             padding: 5px 30px;
+            border: 2px solid transparent;
+            transition: all 0.3s;
+        }
+        a:hover {
+            border-color: var(--black);
+            background-color: transparent;
         }
     }
     .right {
