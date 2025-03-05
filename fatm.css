@@ -49,10 +49,13 @@ a {
 .visible {
     display: flex!important;
 }
+
 /* start landing page  */
 nav {
     z-index: 10000;
     position: relative;
+    height: 50px;
+    width: 90%;
     .container {
         height: 50px;
         width: 90%;
@@ -194,6 +197,7 @@ nav {
 }
 @media (max-width: 768px) {
     nav {
+        width: fit-content;
         .container {
             h1 {
                 font-size: 20px;
@@ -207,6 +211,7 @@ nav {
                 align-items: end;
                 gap: 2px;
                 width: 40px;
+                cursor: pointer;
                 span {
                     display: block;
                     width: 100%;
@@ -225,7 +230,7 @@ nav {
             ul {
                 display: none;
                 position: absolute;
-                right: 0;
+                right: -40px;
                 top: 50px;
                 width: 150px;
                 height: 200px;
@@ -233,8 +238,7 @@ nav {
                 gap: 0;
                 justify-content: space-around;
                 border-radius: 7px;
-                background: #ffffffad;
-                backdrop-filter: blur(20px);
+                background: #ffffffdb;
                 a {
                     font-size: 20px;
                     margin-left: 20px;
@@ -244,15 +248,98 @@ nav {
     }
     .second-part {
         .container {
+            overflow: hidden;
+            flex-direction: column;
             .left {
-            width: 50%;
-            h3 {
-                font-size: 25px;
+                width: 60%;
+                h3 {
+                    font-size: 25px;
+                }
+                p {
+                    font-size: 13px;
+                }
             }
-            p {
-                font-size: 15px;
+            .right {
+                width: 100%;
+                margin-bottom: 350px;
+                svg {
+                    position: absolute;
+                    width: 410px;
+                    top: 50px;
+                    right:0px;
+                }
+                img {
+                    top: 60px;
+                    right: 50px;
+                    width: 250px;
+                }
             }
-        }
         }
     }
 }
+/* end of landing page  */
+/* start about section  */
+.about {
+    margin-top: 30px;
+    background-color: #ffd10323;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 50px;
+    .container {
+        display: flex;
+    }
+    .left {
+        width: 60%;
+        h2 {
+            font-size: 40px;
+            margin-bottom: 30px;
+            padding-top: 50px;
+        }
+        p {
+            font-size: 15px;
+            color: #6e6e6e;
+            margin-bottom: 50px;
+        }
+        a {
+            border-radius: 7px;
+            background-color:var(--main-c);
+            color: var(--black);
+            padding: 5px 30px;
+        }
+    }
+    .right {
+        width: 40%;
+        margin-top: 50px;
+        transform: translateX(70px);
+        svg {
+            width: 400px;
+            position: absolute;
+            z-index: 1;
+        }
+        img {
+            width: 300px;
+            z-index: 2;
+            position: absolute;
+            transform: translateX(70px);
+        }
+        
+    }
+}
+@media (max-width: 768px) {
+    .about {
+        .container {
+            position: relative;
+            flex-direction: column-reverse;
+            flex-wrap: wrap;
+            .left {
+                width: 98%;
+                margin-top: 400px;
+            }
+            .right {
+                transform: translateX(0px);
+            }
+        }
+    }
+}
+
+/* end about section  */
